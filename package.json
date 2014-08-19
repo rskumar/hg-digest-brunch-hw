@@ -1,0 +1,26 @@
+{
+  "name": "hg-digest-brunch",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bolamn/hg-digest-brunch.git"
+  },
+  "main": "lib/index",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "scripts": {
+    "postinstall": "coffee -c -o lib src"
+  },
+  "dependencies": {
+    "coffee-script": "~1.5.0",
+    "replace": "~0.2.9",
+    "chomp": "0.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/bolamn/hg-digest-brunch/issues"
+  },
+  "readme": "N/A",
+  "homepage": "https://github.com/bolamn/hg-digest-brunch",
+  "_id": "hg-digest-brunch@0.0.1"
+}

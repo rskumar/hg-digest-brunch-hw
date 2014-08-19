@@ -1,0 +1,36 @@
+replace = require 'replace'
+chomp = require 'chomp'
+exec = require('child_process').exec
+
+module.exports = class Digest
+
+  brunchPlugin: true
+
+  constructor: (@config) ->
+
+    # Defaults options
+    @options = {
+      # A RegExp where the first subgroup matches the filename to be replaced
+      pattern: /\?DIGEST/g
+      # Run in specific environments
+      environments: ['production']
+    }
+
+    # Merge config
+    cfg = @config.plugins?.digest ? {}
+    @options[k] = cfg[k] for k of cfg
+
+  onCompile: ->
+    return unless @config.env[0] in @options.environments
+    @execute 'hg identify -i', @replace
+
+  execute: (command, callback) ->
+    exec command, (error, stdout, stderr) -> callback stdout
+
+  replace: (digest) =>
+    replace
+      regex: @options.pattern
+      replacement: '?' + digest.substring(0, digest.length - 2).chomp()
+      paths: [@config.paths.public]
+      recursive: true
+      silent: true
