@@ -30,7 +30,7 @@ module.exports = class Digest
   replace: (digest) =>
     replace
       regex: @options.pattern
-      replacement: '?' + digest.substring(0, digest.length - 2).chomp()
+      replacement: '?' + digest.replace(/\W+/g,'').chomp()
       paths: [@config.paths.public]
       recursive: true
       silent: true
