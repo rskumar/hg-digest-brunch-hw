@@ -1,5 +1,4 @@
 replace = require 'replace'
-chomp = require 'chomp'
 exec = require('child_process').exec
 
 module.exports = class Digest
@@ -30,7 +29,7 @@ module.exports = class Digest
   replace: (digest) =>
     replace
       regex: @options.pattern
-      replacement: '?' + digest.replace(/\W+/g,'').chomp()
+      replacement: '?' + digest.replace(/\W+/g,'')
       paths: [@config.paths.public]
       recursive: true
       silent: true
