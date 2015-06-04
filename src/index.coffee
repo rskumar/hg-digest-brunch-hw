@@ -10,7 +10,7 @@ module.exports = class Digest
     # Defaults options
     @options = {
       # A RegExp where the first subgroup matches the filename to be replaced
-      pattern: /\?DIGEST/g
+      pattern: /__DIGEST__/g
       # Run in specific environments
       environments: ['production']
     }
@@ -29,7 +29,7 @@ module.exports = class Digest
   replace: (digest) =>
     replace
       regex: @options.pattern
-      replacement: '?' + digest.replace(/\W+/g,'')
+      replacement: digest.replace(/\W+/g,'')
       paths: [@config.paths.public]
       recursive: true
       silent: true
