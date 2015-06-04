@@ -1,9 +1,9 @@
 {
-  "name": "hg-digest-brunch",
+  "name": "hg-digest-brunch-hw",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git@github.com:bolamn/hg-digest-brunch.git"
+    "url": "git@github.com:rskumar/hg-digest-brunch-hw.git"
   },
   "main": "lib/index",
   "engines": {
@@ -18,9 +18,9 @@
     "chomp": "0.0.1"
   },
   "bugs": {
-    "url": "https://github.com/bolamn/hg-digest-brunch/issues"
+    "url": "https://github.com/rskumar/hg-digest-brunch-hw/issues"
   },
   "readme": "N/A",
-  "homepage": "https://github.com/bolamn/hg-digest-brunch",
-  "_id": "hg-digest-brunch@0.0.1"
+  "homepage": "https://github.com/rskumar/hg-digest-brunch-hw",
+  "_id": "hg-digest-brunch-hw@0.0.1"
 }
