@@ -1,4 +1,4 @@
-hg-digest-brunch
+hg-digest-brunch-hw
 =================
 
 A [Brunch](http://brunch.io) plugin for cache busting urls using the SHA digest of the current mercurial revision. 
@@ -24,4 +24,4 @@ Build with `brunch build --production`, file paths are now cache busted:
 
 ## Credit
 
-forked and modified from https://github.com/meleyal/git-digest-brunch
+forked and modified from https://github.com/BoLaMN/hg-digest-brunch
